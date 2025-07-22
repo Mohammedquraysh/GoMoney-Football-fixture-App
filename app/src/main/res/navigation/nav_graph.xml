@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fixturesFragment">
+
+    <fragment
+        android:id="@+id/fixturesFragment"
+        android:name="com.presentation.ui.fixtures.FixturesFragment"
+        android:label="fragment_fixtures"
+        tools:layout="@layout/fragment_fixtures" >
+        <action
+            android:id="@+id/action_fixturesFragment_to_fixtureDetailsFragment"
+            app:destination="@id/fixtureDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixtureDetailsFragment"
+        android:name="com.presentation.ui.detail.FixtureDetailsFragment"
+        android:label="fragment_fixture_details"
+        tools:layout="@layout/fragment_fixture_details" >
+        <argument
+            android:name="fixtureId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/competitionMainFragment"
+        android:name="com.presentation.ui.CompetitionMainFragment"
+        android:label="Competition"
+        tools:layout="@layout/fragment_competition_main">
+
+        <argument
+            android:name="competitionId"
+            app:argType="string" />
+        <argument
+            android:name="competitionName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_competitionMainFragment_to_teamsFragment"
+            app:destination="@id/teamsFragment" />
+        <action
+            android:id="@+id/action_competitionMainFragment_to_leagueTableFragment"
+            app:destination="@id/leagueTableFragment" />
+        <action
+            android:id="@+id/action_competitionMainFragment_to_teamSquadFragment"
+            app:destination="@id/teamSquadFragment" />
+
+
+        <action
+            android:id="@+id/action_to_team"
+            app:destination="@id/teamsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/teamsFragment"
+        android:name="com.presentation.ui.teams.TeamsFragment"
+        android:label="Teams"
+        tools:layout="@layout/fragment_teams">
+
+        <action
+            android:id="@+id/action_teamsFragment_to_teamSquadFragment"
+            app:destination="@id/teamSquadFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/teamSquadFragment"
+        android:name="com.presentation.ui.team_squard.TeamSquadFragment"
+        android:label="fragment_team_squad"
+        tools:layout="@layout/fragment_team_squad" >
+
+        <argument
+            android:name="teamId"
+            app:argType="integer" />
+        <argument
+            android:name="teamName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/leagueTableFragment"
+        android:name="com.presentation.ui.league.LeagueTableFragment"
+        android:label="Competitions"
+        tools:layout="@layout/fragment_league_table">
+
+    </fragment>
+
+</navigation>
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="material_on_surface_emphasis_medium">#99000000</color>
+
+
+    <!-- Primary Colors -->
+    <color name="primary_color">#1976D2</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="accent_color">#FF4081</color>
+
+    <!-- Background Colors -->
+    <color name="background_light">#F5F5F5</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Table Position Colors -->
+    <color name="champions_league_color">#4CAF50</color>
+    <color name="europa_league_color">#FF9800</color>
+    <color name="relegation_color">#F44336</color>
+
+    <!-- Background Colors -->
+    <color name="table_header_bg">#FAFAFA</color>
+    <color name="squad_header_bg">#FAFAFA</color>
+
+    <!-- Divider -->
+    <color name="divider_light">#E0E0E0</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+</resources>
