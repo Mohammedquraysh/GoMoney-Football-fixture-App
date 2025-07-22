@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.domain.model.Competition
@@ -76,8 +77,7 @@ class CompetitionsBottomSheetFragment : BottomSheetDialogFragment() {
                 }
                 is Resource.Error -> {
                     binding.progressBar.visibility = View.GONE
-                    binding.textViewError.visibility = View.VISIBLE
-                    binding.textViewError.text = resource.message
+                    Toast.makeText(requireContext(), resource.message, Toast.LENGTH_SHORT).show()
                 }
             }
         }

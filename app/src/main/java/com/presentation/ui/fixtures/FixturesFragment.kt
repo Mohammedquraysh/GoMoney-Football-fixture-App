@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -91,8 +92,7 @@ class FixturesFragment : Fragment() {
                 }
                 is Resource.Error -> {
                     binding.progressBar.visibility = View.GONE
-                    binding.textViewError.visibility = View.VISIBLE
-                    binding.textViewError.text = resource.message
+                    Toast.makeText(requireContext(), resource.message, Toast.LENGTH_SHORT).show()
                 }
             }
         }
